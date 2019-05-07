@@ -51,3 +51,7 @@ We have learned that closures allow us to access values in scope that have alrea
 
 * [ ] Go back through the stretch problems that you skipped over and complete as many as you can.
 * [ ] Look up what an IIFE is in JavaScript and experiment with them
+
+https://codepen.io/bpatton/pen/zQxpeQ?editors=0011
+https://codepen.io/bpatton/pen/mYypoR?editors=0011
+https://codepen.io/bpatton/pen/KLwZEB?editors=1011
