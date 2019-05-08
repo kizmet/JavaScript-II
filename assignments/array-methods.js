@@ -78,11 +78,13 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-let emailList = runners
-// .map( k => runners[k] )
-// .map(k => k.email)
-.filter(k => k.shirt_size =="L");
-console.log(emailList.slice(0-5));
+var emailList = runners
+
+	.sort((a,b) => a.donation - b.donation)
+	.filter(k => k.shirt_size =="L")
+	.reduce((ac,r) => ({...ac, [r.email]: (r.last_name +" " +r.first_name + ", thanks for donating $" + r.donation)}),{})
+
+console.log(emailList);
 
 // Problem 2
 let donationsByCompay = runners.reduce(
