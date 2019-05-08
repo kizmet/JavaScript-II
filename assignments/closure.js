@@ -1,5 +1,26 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+let pub = 'Student'
+{
+    let name = 'Bryant';
+    console.log(name,pub); 
+    {
+    	let id = 12345;
+    	console.log(name);
+    };
+    console.log(name);
+};
+
+try {
+	console.log(pub);
+	console.log(id);
+
+}
+catch (err) {
+	console.log(err.name);
+}
+
+
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */

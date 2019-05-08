@@ -2,8 +2,6 @@
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
-/* 
-
   //Given this problem: 
   
   function firstItem(arr, cb) {
@@ -22,34 +20,59 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
     console.log(first)
   });
 
-*/
-
-
 function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
+  return cb(arr.length);
 }
+getLength(items,function(leng) {
+  console.log(leng)
+});
 
 function last(arr, cb) {
-  // last passes the last item of the array into the callback.
+  return cb(arr[arr.length -1]);
 }
+last(items,function(lst) {
+  console.log(lst)
+});
 
-function sumNums(x, y, cb) {
+function sumNums(x,y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x+y);
 }
+sumNums(2,4,function(num) {
+  console.log(num)
+}) 
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x*y);
 }
+multiplyNums(2,9,function(num) {
+  console.log(num)
+}) 
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  return cb(list.includes(item))
 }
 
+contains(3,[4,5,3,2],function(num) {
+  console.log(num)
+})
 /* STRETCH PROBLEM */
-
-function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-}
+// const items2 = ['Pencil','Pencil', 'Notebook', 'yo-yo', 'Gum'];
+// function removeDuplicates(arr) {
+//   arr.reduce(ac, cb) => {
+//   // removeDuplicates removes all duplicate values from the given array.
+//   // Pass the duplicate free array to the callback function.
+//   // Do not mutate the original array.
+//   if (ac.indexOf(cb) === -1) {
+//     return ac(cb);
+//     // return cb(ac)
+//   }
+//   // return ac
+// }}
+// // console.log(items2);
+// removeDuplicates(items2,function(freeArray) {
+//   console.log(freeArray)
+// })
